@@ -20,6 +20,7 @@
     - [Definición de reglas de negocio](#definición-de-reglas-de-negocio)
     - [Crear pruebas con Podam](#crear-pruebas-con-podam)
     - [Tu turno](#tu-turno)
+    - [Solución](#solución-1)
 
 ---
 
@@ -263,3 +264,7 @@ Sin embargo, podemos notar que no siempre se generan todos los casos (uno de los
 ### Tu turno
 
 Ahora intenta implementar los pasos anteriores para los demás atributos. En específico, piensa cómo podrías generar los correos electrónicos.
+
+### Solución
+
+La solución al taller se puede ver en [podam](podam/)
