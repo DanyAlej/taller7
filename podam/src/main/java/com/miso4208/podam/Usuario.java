@@ -1,5 +1,8 @@
 package com.miso4208.podam;
 
+import com.miso4208.podam.Estrategias.ClaveStrategy;
+import com.miso4208.podam.Estrategias.CorreoStrategy;
+import com.miso4208.podam.Estrategias.EdadStrategy;
 import com.miso4208.podam.Estrategias.NombreStrategy;
 
 import uk.co.jemos.podam.common.PodamStrategyValue;
@@ -7,19 +10,21 @@ import uk.co.jemos.podam.common.PodamStrategyValue;
 public class Usuario {
     @PodamStrategyValue(NombreStrategy.class)
     private String nombre;
-    private String username;
-    private String correo;
-    private int edad;
-    private String clave;
-    private String claveVerificada;
 
-    public Usuario(String nombre, String username, String correo, int edad, String clave, String claveVerificada) {
+    @PodamStrategyValue(CorreoStrategy.class)
+    private String correo;
+
+    @PodamStrategyValue(EdadStrategy.class)
+    private int edad;
+
+    @PodamStrategyValue(ClaveStrategy.class)
+    private String clave;
+
+    public Usuario(String nombre, String correo, int edad, String clave) {
         this.nombre = nombre;
-        this.username = username;
         this.correo = correo;
         this.edad = edad;
         this.clave = clave;
-        this.claveVerificada = claveVerificada;
     }
 
     public String getNombre() {
@@ -28,14 +33,6 @@ public class Usuario {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getCorreo() {
@@ -61,13 +58,4 @@ public class Usuario {
     public void setClave(String clave) {
         this.clave = clave;
     }
-
-    public String getClaveVerificada() {
-        return claveVerificada;
-    }
-
-    public void setClaveVerificada(String claveVerificada) {
-        this.claveVerificada = claveVerificada;
-    }
-
 }
