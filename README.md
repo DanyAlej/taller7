@@ -13,6 +13,9 @@
     - [Generación de Schemas](#generación-de-schemas)
     - [Creación de API](#creación-de-api)
     - [Interfaz](#interfaz)
+  - [Podam](#podam)
+    - [Introducción](#introducción-1)
+    - [Instalación de Podam](#instalación-de-podam)
 
 ---
 
@@ -101,3 +104,13 @@ La interfaz interactúa con las diferentes APIs creadas, en este caso se present
 <br />
 ![](images/9.png)<br />
 ![](images/10.png)
+
+## Podam
+
+### Introducción
+
+Podam es una herramienta de generación de datos para objetos planos de Java. Algunas de sus principales características es que él automáticamente genera datos para los atributos de la clase, pero, así mismo, se le pueden manipular las estrategias de generación de datos, ignorar ciertos campos y te permite crear tus propias fábricas para cuando éste no puede generar los datos por sí solo.
+
+### Instalación de Podam
+
+Primero, comenzamos por crear un proyecto Maven. Maven es un herramienta que nos facilita la creación y el manejo de proyectos de Java, por lo que nos servirá para correr los tests y crear las clases de manera sencilla. Así, podremos concentrarnos en Podam.
