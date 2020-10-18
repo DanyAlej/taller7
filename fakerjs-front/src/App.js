@@ -37,8 +37,8 @@ function App() {
   const generateTodo = () =>{
     const data = {
       tags : faker.random.boolean(),
-      title : faker.random.words(),
-      notes : faker.random.words()
+      title : faker.lorem.sentence(),
+      notes : faker.lorem.sentences()
     }
     setRegisterData([])
     setLoginData([])
@@ -63,8 +63,8 @@ function App() {
    setTodoData([
      {
       tags : faker.random.boolean(),
-      title : faker.random.words(),
-      notes : faker.random.words()
+      title : faker.lorem.sentence(),
+      notes : faker.lorem.sentences()
      }
    ])
   }
