@@ -17,9 +17,9 @@ Sera necesario probar la creación de 50 cuentas correctamente y hacer 100 inten
 3. Mediante el uso de Podam se probarán las mismas funcionalidades en las aplicaciones móviles Habitica y MyExpenses. Se probara el login y registro de Habitica, y los input fields de MyExpenses.
 
 ### Solución
-La solución del taller se puede encontrar en esta link de forma organizada:
+La solución del taller se puede encontrar en esta link de forma organizada:<br />
 
-[](https://docs.google.com/document/d/1I5PqdPoc-RrhYmZhOUW_dnCDraG26U9knTdegJDDcaQ/edit?usp=sharing)j
+https://docs.google.com/document/d/1I5PqdPoc-RrhYmZhOUW_dnCDraG26U9knTdegJDDcaQ/edit?usp=sharing
 
 Tambien fue incluida aca debajo.
 
@@ -50,35 +50,35 @@ Para la creación de la API Rest, una vez creados los esquemas dentro de la herr
 ![](images/6.png)
 Nota: Es importante que al momento de guardar el esquema se elija el formato en el cuál se desea que la API responda y cuantos datos debe generar.
 Habitica_Todo
-GET:
-[](https://my.api.mockaroo.com/habitica_todo.json?key=1dd1d190)
-POST:
-[](https://my.api.mockaroo.com/habitica_todo.json?key=1dd1d190&__method=POST)
-GET (:id):
-[](https://my.api.mockaroo.com/habitica_todo/123.json?key=1dd1d190)
-Habitica_Register
-GET:
+GET:<br />
+https://my.api.mockaroo.com/habitica_todo.json?key=1dd1d190)
+POST: <br />
+https://my.api.mockaroo.com/habitica_todo.json?key=1dd1d190&__method=POST
+GET (:id):<br />
+https://my.api.mockaroo.com/habitica_todo/123.json?key=1dd1d190
+Habitica_Register<br />
+GET:<br />
 [](https://my.api.mockaroo.com/habitica_register.json?key=1dd1d190)
-GET (:id):
+GET (:id):<br />
 Para simular de manera correcta la obtención de datos fue necesario agregar lo si quiente a mockaroo de manera que se devolviese el mismo usuario que se pidio aunque el resto de campos vuelven a hacer aleatorios.
 ![](images/7.png)
 Si intentamos obtener el usuario DanyAlej, obtenemos este mismo usuario:
 [](https://my.api.mockaroo.com/habitica_register/danyalej.json?key=1dd1d190)
 ![](images/8.png)
-POST: 
+POST: <br />
 https://my.api.mockaroo.com/habitica_register.json?key=1dd1d190&__method=POST
 Habitaca_Login:
-GET:
-[](https://my.api.mockaroo.com/habitica_login.json?key=1dd1d190)
-POST:
-[](https://my.api.mockaroo.com/habitica_login.json?key=1dd1d190&__method=POST)
-GET (:email):
-[](https://my.api.mockaroo.com/habitica_login/dabenavides.json?key=1dd1d190)
+GET:<br />
+https://my.api.mockaroo.com/habitica_login.json?key=1dd1d190
+POST:<br />
+https://my.api.mockaroo.com/habitica_login.json?key=1dd1d190&__method=POST
+GET (:email):<br />
+https://my.api.mockaroo.com/habitica_login/dabenavides.json?key=1dd1d190
 
 #### Interfaz
 
 En este video se puede encontrar el funcionamiento de la interfaz:
-[](https://www.loom.com/share/b6e1f560b6a6460fb270be0b64424e4c)
+https://www.loom.com/share/b6e1f560b6a6460fb270be0b64424e4c <br />
 La interfaz interactúa con las diferentes APIs creadas, en este caso se presentan los 3 esquemas usados.
 ![](images/9.png)
 ![](images/10.png)
@@ -86,15 +86,4 @@ La interfaz interactúa con las diferentes APIs creadas, en este caso se present
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+ 
