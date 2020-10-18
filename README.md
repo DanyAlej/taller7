@@ -30,23 +30,23 @@ Tambien es posible hacer uso de herramientas no programáticas y descargar la in
 
 #### Generación de Schemas
 
-Para crear los Schemas, es decir la plantilla con la que se crearan los datos.
+Para crear los Schemas, es decir la plantilla con la que se crearan los datos. <br />
 ![](images/1.png)
 
-Esquema para registro de Habitica:
+Esquema para registro de Habitica: <br />
 ![](images/2.png)
 Como se puede observar, la información se puede generar con campos vacíos basados en un porcentaje. Esto resulta útil al momento de probar formularios y sus verificaciones de campos vacíos.
 
-Login Habitica:
+Login Habitica: <br />
 ![](images/3.png)
-Esquema para creación de Todos:
-![](images/5.png)
-Basado en:
+Esquema para creación de Todos: <br />
+![](images/5.png) <br />
+Basado en: <br />
 ![](images/4.png)
 
 #### Creación de API
 
-Para la creación de la API Rest, una vez creados los esquemas dentro de la herramienta mockaroo es necesario dirigirse al esquema el cuál se desea utilizar y crear la API.
+Para la creación de la API Rest, una vez creados los esquemas dentro de la herramienta mockaroo es necesario dirigirse al esquema el cuál se desea utilizar y crear la API. <br />
 ![](images/6.png)
 Nota: Es importante que al momento de guardar el esquema se elija el formato en el cuál se desea que la API responda y cuantos datos debe generar.
 Habitica_Todo
@@ -62,8 +62,8 @@ GET:<br />
 GET (:id):<br />
 Para simular de manera correcta la obtención de datos fue necesario agregar lo si quiente a mockaroo de manera que se devolviese el mismo usuario que se pidio aunque el resto de campos vuelven a hacer aleatorios.
 ![](images/7.png)
-Si intentamos obtener el usuario DanyAlej, obtenemos este mismo usuario:
-[](https://my.api.mockaroo.com/habitica_register/danyalej.json?key=1dd1d190)
+Si intentamos obtener el usuario DanyAlej, obtenemos este mismo usuario: <br />
+https://my.api.mockaroo.com/habitica_register/danyalej.json?key=1dd1d190 <br />
 ![](images/8.png)
 POST: <br />
 https://my.api.mockaroo.com/habitica_register.json?key=1dd1d190&__method=POST
@@ -80,7 +80,8 @@ https://my.api.mockaroo.com/habitica_login/dabenavides.json?key=1dd1d190
 En este video se puede encontrar el funcionamiento de la interfaz:
 https://www.loom.com/share/b6e1f560b6a6460fb270be0b64424e4c <br />
 La interfaz interactúa con las diferentes APIs creadas, en este caso se presentan los 3 esquemas usados.
-![](images/9.png)
+<br />
+![](images/9.png)<br />
 ![](images/10.png)
 
 
