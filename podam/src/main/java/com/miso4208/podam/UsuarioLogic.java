@@ -1,15 +1,29 @@
 package com.miso4208.podam;
 
+import java.util.regex.Pattern;
+
+import com.miso4208.podam.Exceptions.ClaveException;
+import com.miso4208.podam.Exceptions.CorreoException;
+import com.miso4208.podam.Exceptions.EdadException;
 import com.miso4208.podam.Exceptions.NombreException;
 
 public class UsuarioLogic {
-    public Usuario crearUsuario(String nombre, String username, String correo, int edad, String clave,
-            String claveVerificada) throws NombreException {
+    public Usuario crearUsuario(String nombre, String correo, int edad, String clave)
+            throws NombreException, CorreoException, EdadException, ClaveException {
 
         if (!nombreEsValido(nombre))
             throw new NombreException();
 
-        return new Usuario(nombre, username, correo, edad, clave, claveVerificada);
+        if (!correoEsValido(correo))
+            throw new CorreoException();
+
+        if (!edadEsValido(edad))
+            throw new EdadException();
+
+        if (!claveEsValida(clave))
+            throw new ClaveException();
+
+        return new Usuario(nombre, correo, edad, clave);
     }
 
     // -----------Métodos de validación----------
@@ -26,5 +40,21 @@ public class UsuarioLogic {
         }
 
         return true;
+    }
+
+    private boolean correoEsValido(String correo) {
+        if (!correo.isEmpty() && Pattern.matches("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", correo)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private boolean edadEsValido(int edad) {
+        return edad > 0;
+    }
+
+    private boolean claveEsValida(String clave) {
+        return clave.length() >= 6;
     }
 }

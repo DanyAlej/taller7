@@ -5,11 +5,11 @@ import java.util.List;
 
 import uk.co.jemos.podam.common.AttributeStrategy;
 
-public class NombreStrategy implements AttributeStrategy<String> {
+public class ClaveStrategy implements AttributeStrategy<String> {
 
     @Override
-    public String getValue(Class<?> arg0, List<Annotation> arg1) {
-        int numCharacters = (int) (Math.random() * 200);
+    public String getValue(Class<?> attrType, List<Annotation> attrAnnotations) {
+        int numCharacters = (int) (Math.random() * 12);
 
         return AlphaNumericString.generateString(numCharacters);
     }
