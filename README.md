@@ -20,6 +20,7 @@
     - [Definición de reglas de negocio](#definición-de-reglas-de-negocio)
     - [Crear pruebas con Podam](#crear-pruebas-con-podam)
     - [Tu turno](#tu-turno)
+    - [Solución](#solución-1)
 
 ---
 
@@ -125,11 +126,9 @@ Para este taller, crearemos una clase que simula los datos ingresados por un usu
 
 ```java
 private String nombre;
-private String username;
 private String correo;
 private int edad;
 private String clave;
-private String claveVerificada;
 ```
 
 Así mismo, debemos crear el constructor para la clase y los getters y setters para cada atributo.
@@ -175,11 +174,9 @@ void nombreUsuarioTest() {
   PodamFactory factory = new PodamFactoryImpl();
   Usuario usuario = factory.manufacturePojo(Usuario.class);
   System.out.println(usuario.getNombre());
-  System.out.println(usuario.getUsername());
   System.out.println(usuario.getCorreo());
   System.out.println(usuario.getEdad());
   System.out.println(usuario.getClave());
-  System.out.println(usuario.getClaveVerificada());
 }
 ```
 
@@ -241,14 +238,14 @@ public class UsuarioTest {
 
       if (usuario.getNombre().isEmpty() || usuario.getNombre().length() >= 100) {
         assertThrows(NombreException.class, () -> {
-            usuarioLogic.crearUsuario(usuario.getNombre(), usuario.getUsername(), usuario.getCorreo(),
-                    usuario.getEdad(), usuario.getClave(), usuario.getClaveVerificada());
+            usuarioLogic.crearUsuario(usuario.getNombre(), usuario.getCorreo(),
+                    usuario.getEdad(), usuario.getClave());
         }, "Debería generar una excepción.");
       } else {
         try {
           assertNotNull(
-                  usuarioLogic.crearUsuario(usuario.getNombre(), usuario.getUsername(), usuario.getCorreo(),
-                          usuario.getEdad(), usuario.getClave(), usuario.getClaveVerificada()),
+                  usuarioLogic.crearUsuario(usuario.getNombre(), usuario.getCorreo(),
+                          usuario.getEdad(), usuario.getClave()),
                   "Debería retornar el objeto usuario");
         } catch (Exception e) {
           assertFalse(true, "No debería lanzar excepciones.");
@@ -266,4 +263,8 @@ Sin embargo, podemos notar que no siempre se generan todos los casos (uno de los
 
 ### Tu turno
 
-Ahora intenta implementar los pasos anteriores para los demás atributos. En específico, piensa cómo podrías generar los correos electrónicos y generar casos en los que `clave` y `claveVerificada` sean el mismo. ¿Será posible con Podam?
+Ahora intenta implementar los pasos anteriores para los demás atributos. En específico, piensa cómo podrías generar los correos electrónicos.
+
+### Solución
+
+La solución al taller se puede ver en [podam](podam/)
